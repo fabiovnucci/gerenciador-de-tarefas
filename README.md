@@ -1,26 +1,22 @@
-# gerenciador-de-tarefas
-Gerenciador de tarefas e notas técnicas desenvolvido com HTML, CSS e JavaScript para organização de estudos e comandos de programação.
 # Gerenciador de Tarefas e Notas Técnicas
 
-Projeto desenvolvido para ajudar na organização de tarefas diárias, com foco especial em salvar blocos de código e anotações técnicas (DOM).
+Projeto desenvolvido para ajudar na organização de tarefas diárias e registro de comandos técnicos (DOM). 
 Feito com HTML, CSS, JavaScript e boas práticas de front-end.
 
-## Funcionalidades
+### 🚀 Funcionalidades
 
-* **Adicionar tarefas e categorias:** Organização entre Estudos, Trabalho e Pessoal.
-* **Bloco de Notas / Código:** Campo dedicado para salvar comandos e lembretes técnicos.
-* **Visual de Terminal:** Notas técnicas exibidas com formatação de código (Dark Mode).
-* **Remoção de Itens:** Possibilidade de excluir tarefas individualmente.
-* **Interface Responsiva:** Layout organizado que se ajusta a diferentes telas.
+* **Cadastro de Tarefas:** Organização entre Estudos, Trabalho e Pessoal.
+* **Bloco de Notas / Código:** Campo para comandos e lembretes com visual de terminal.
+* **Visual Dark Mode:** Notas técnicas exibidas com formatação de código.
+* **Interatividade:** Adicionar e remover tarefas em tempo real.
 
-## Tecnologias usadas
+### 🛠️ Tecnologias usadas
 
-* HTML
-* CSS (Flexbox e estilização de blocos de código)
-* JavaScript (Manipulação de DOM)
-* Git / GitHub
+* **HTML5 / CSS3** (Flexbox)
+* **JavaScript** (Manipulação de DOM)
+* **Git / GitHub**
 
-## Como usar
+### 📂 Como usar
 
 1. **Clonar o repositório:**
    ```bash
