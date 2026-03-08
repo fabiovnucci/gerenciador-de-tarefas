@@ -116,8 +116,36 @@ pre {
     overflow-x: auto;
 }
 
-footer {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #888;
+/* ÍCONE GITHUB */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #95a5a6;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
+.github-link i { font-size: 1.2rem; }
+.github-link:hover { color: #27ae60; transform: translateY(-2px); }
+
+/* RODAPÉ FVN TECH */
+.main-footer {
+  width: 100%;
+  background: #1a1a1a;
+  color: white;
+  padding: 30px 10%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid #27ae60;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-item { flex: 1; min-width: 150px; text-align: center; }
+.footer-logo { width: 80px; margin-bottom: 10px; }
+.version-tag { color: #27ae60; border: 1px solid #27ae60; padding: 2px 8px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+.footer-item a { color: #95a5a6; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+.footer-item a:hover { color: #27ae60; }
