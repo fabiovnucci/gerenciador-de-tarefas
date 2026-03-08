@@ -1,23 +1,31 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-}
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
 
 body {
     background-color: #f0f2f5;
     color: #333;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* CABEÇALHO */
+header { width: 100%; text-align: center; }
+
+h1 { 
+    color: #2c3e50; 
+    margin: 40px 0 10px; /* Espaço no topo */
+    text-transform: uppercase; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px; 
+    text-align: center; 
+}
+
+header p { 
+    margin-bottom: 30px; /* Respiro após o subtítulo antes do card */
+    color: #666;
+    font-size: 0.9rem;
 }
 
 main {
@@ -27,107 +35,39 @@ main {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
 }
 
-/* ORGANIZAÇÃO DOS CAMPOS LADO A LADO */
-.linha-superior {
-    display: flex;
-    gap: 15px; /* Espaço entre tarefa e categoria */
-    flex-wrap: wrap; /* Para não quebrar em telas pequenas */
-}
+/* FORMULÁRIO */
+.linha-superior { display: flex; gap: 15px; flex-wrap: wrap; }
+.controle-campo { display: flex; flex-direction: column; margin-bottom: 15px; }
+.tarefa-nome { flex: 3; }
+.categoria-box { flex: 1; }
 
-.controle-campo {
-    display: flex;
-    flex-direction: column;
-}
+label { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #555; }
+input, select, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; outline: none; }
+input:focus, textarea:focus { border-color: #27ae60; }
 
-.tarefa-nome {
-    flex: 3; /* Ganha mais espaço horizontal */
-}
-
-.categoria-box {
-    flex: 1; /* Ganha menos espaço horizontal */
-}
-
-/* Estilo dos inputs e campos */
-label {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-input, select, textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-}
-
-input:focus, textarea:focus {
-    border-color: #3498db;
-}
-
-/* BOTÃO CADASTRAR */
 #adicionar {
     width: 100%;
     background-color: #27ae60;
     color: white;
     border: none;
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
+#adicionar:hover { background-color: #219150; }
 
-#adicionar:hover {
-    background-color: #219150;
-}
+hr { margin: 30px 0; border: 0; border-top: 1px solid #eee; }
 
-hr {
-    margin: 30px 0;
-    border: 0;
-    border-top: 1px solid #eee;
-}
-
-/* LISTA DE TAREFAS (COMO O ITEM APARECE) */
-li {
-    list-style: none;
-    background: #fafafa;
-    border-left: 5px solid #3498db;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    position: relative;
-}
-
-/* O BLOCO DE CÓDIGO DENTRO DA TAREFA */
-pre {
-    background: #2d3436;
-    color: #00ff00; /* Verde estilo terminal antigo */
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 10px;
-    font-family: 'Courier New', monospace;
-    overflow-x: auto;
-}
-
-/* ÍCONE GITHUB */
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    color: #95a5a6;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-.github-link i { font-size: 1.2rem; }
-.github-link:hover { color: #27ae60; transform: translateY(-2px); }
+/* LISTA */
+li { list-style: none; background: #fafafa; border-left: 5px solid #27ae60; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+pre { background: #2d3436; color: #00ff00; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: 'Courier New', monospace; overflow-x: auto; }
 
 /* RODAPÉ FVN TECH */
 .main-footer {
@@ -147,5 +87,7 @@ pre {
 .footer-item { flex: 1; min-width: 150px; text-align: center; }
 .footer-logo { width: 80px; margin-bottom: 10px; }
 .version-tag { color: #27ae60; border: 1px solid #27ae60; padding: 2px 8px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
-.footer-item a { color: #95a5a6; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
-.footer-item a:hover { color: #27ae60; }
+.footer-item a { color: #95a5a6; text-decoration: none; font-size: 0.85rem; }
+
+.github-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #95a5a6; text-decoration: none; transition: 0.3s ease; }
+.github-link:hover { color: #27ae60; transform: translateY(-2px); }
