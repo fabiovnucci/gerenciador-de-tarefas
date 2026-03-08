@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciador de Tarefas | FVN TECH</title>
+</head>
+<body>
+
+    <header>
+        <h1>Gerenciador de Tarefas</h1>
+        <p>Projeto 02 - Sistema de Organização Pessoal</p>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <div class="linha-superior">
+                <div class="controle-campo tarefa-nome">
+                    <label for="tarefa">O que precisa ser feito?</label>
+                    <input type="text" id="tarefa" placeholder="Ex: Comando Git Push">
+                </div>
+
+                <div class="controle-campo categoria-box">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria">
+                        <option value="estudos">Estudos</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="pessoal">Pessoal</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="controle-campo" style="margin-top: 15px;">
+                <label for="descricao">Bloco de Notas / Código (DOM):</label>
+                <textarea id="descricao" rows="4" placeholder="Cole aqui o comando ou anotação técnica..."></textarea>
+            </div>
+
+            <button id="adicionar">Cadastrar na Lista</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Minhas Pendências</h2>
+            <ul id="lista-pendencias">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido no ecossistema FVN TECH - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

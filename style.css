@@ -1,0 +1,123 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ORGANIZAÇÃO DOS CAMPOS LADO A LADO */
+.linha-superior {
+    display: flex;
+    gap: 15px; /* Espaço entre tarefa e categoria */
+    flex-wrap: wrap; /* Para não quebrar em telas pequenas */
+}
+
+.controle-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefa-nome {
+    flex: 3; /* Ganha mais espaço horizontal */
+}
+
+.categoria-box {
+    flex: 1; /* Ganha menos espaço horizontal */
+}
+
+/* Estilo dos inputs e campos */
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+}
+
+/* BOTÃO CADASTRAR */
+#adicionar {
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#adicionar:hover {
+    background-color: #219150;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* LISTA DE TAREFAS (COMO O ITEM APARECE) */
+li {
+    list-style: none;
+    background: #fafafa;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* O BLOCO DE CÓDIGO DENTRO DA TAREFA */
+pre {
+    background: #2d3436;
+    color: #00ff00; /* Verde estilo terminal antigo */
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
