@@ -13,17 +13,17 @@ body {
 /* CABEÇALHO */
 header { width: 100%; text-align: center; }
 
-h1 { 
-    color: #2c3e50; 
-    margin: 40px 0 10px; /* Espaço no topo */
-    text-transform: uppercase; 
-    font-size: 1.5rem; 
-    letter-spacing: 1px; 
-    text-align: center; 
+h1 {
+    color: #2c3e50;
+    margin: 40px 0 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
-header p { 
-    margin-bottom: 30px; /* Respiro após o subtítulo antes do card */
+header p {
+    margin-bottom: 30px;
     color: #666;
     font-size: 0.9rem;
 }
@@ -69,25 +69,24 @@ hr { margin: 30px 0; border: 0; border-top: 1px solid #eee; }
 li { list-style: none; background: #fafafa; border-left: 5px solid #27ae60; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
 pre { background: #2d3436; color: #00ff00; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: 'Courier New', monospace; overflow-x: auto; }
 
-/* RODAPÉ FVN TECH */
+/* RODAPÉ */
 .main-footer {
-  width: 100%;
-  background: #1a1a1a;
-  color: white;
-  padding: 30px 10%;
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 5px solid #27ae60;
-  flex-wrap: wrap;
-  gap: 20px;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 5%;
+    background: #4a6a94;
+    color: #ffffff;
+    border-top: 3px solid #27ae60;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    text-align: center;
 }
 
-.footer-item { flex: 1; min-width: 150px; text-align: center; }
-.footer-logo { width: 80px; margin-bottom: 10px; }
-.version-tag { color: #27ae60; border: 1px solid #27ae60; padding: 2px 8px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
-.footer-item a { color: #95a5a6; text-decoration: none; font-size: 0.85rem; }
-
-.github-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #95a5a6; text-decoration: none; transition: 0.3s ease; }
-.github-link:hover { color: #27ae60; transform: translateY(-2px); }
+/* CELULAR */
+@media (max-width: 480px) {
+    .main-footer { flex-direction: column; }
+}
