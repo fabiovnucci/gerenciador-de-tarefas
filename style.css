@@ -1,7 +1,12 @@
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #f0f2f5;
     color: #333;
     display: flex;
@@ -11,7 +16,10 @@ body {
 }
 
 /* CABEÇALHO */
-header { width: 100%; text-align: center; }
+header {
+    width: 100%;
+    text-align: center;
+}
 
 h1 {
     color: #2c3e50;
@@ -19,7 +27,6 @@ h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 header p {
@@ -30,28 +37,68 @@ header p {
 
 main {
     background: #fff;
-    width: 100%;
+    width: calc(100% - 30px);
     max-width: 700px;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 }
 
 /* FORMULÁRIO */
-.linha-superior { display: flex; gap: 15px; flex-wrap: wrap; }
-.controle-campo { display: flex; flex-direction: column; margin-bottom: 15px; }
-.tarefa-nome { flex: 3; }
-.categoria-box { flex: 1; }
+.linha-superior {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-label { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #555; }
-input, select, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; outline: none; }
-input:focus, textarea:focus { border-color: #27ae60; }
+.controle-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo-descricao {
+    margin-top: 15px;
+}
+
+.tarefa-nome {
+    flex: 3;
+    min-width: 200px;
+}
+
+.categoria-box {
+    flex: 1;
+    min-width: 140px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #27ae60;
+}
 
 #adicionar {
     width: 100%;
     background-color: #27ae60;
-    color: white;
+    color: #fff;
     border: none;
     padding: 12px;
     margin-top: 10px;
@@ -61,13 +108,50 @@ input:focus, textarea:focus { border-color: #27ae60; }
     cursor: pointer;
     transition: 0.3s;
 }
-#adicionar:hover { background-color: #219150; }
 
-hr { margin: 30px 0; border: 0; border-top: 1px solid #eee; }
+#adicionar:hover {
+    background-color: #219150;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
 
 /* LISTA */
-li { list-style: none; background: #fafafa; border-left: 5px solid #27ae60; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
-pre { background: #2d3436; color: #00ff00; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: 'Courier New', monospace; overflow-x: auto; }
+li {
+    list-style: none;
+    background: #fafafa;
+    border-left: 5px solid #27ae60;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+pre {
+    background: #2d3436;
+    color: #7ee2a0;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+.btn-excluir {
+    display: block;
+    margin-top: 10px;
+    color: #e74c3c;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    text-decoration: underline;
+}
 
 /* RODAPÉ */
 .main-footer {
@@ -75,7 +159,7 @@ pre { background: #2d3436; color: #00ff00; padding: 12px; border-radius: 6px; ma
     margin-top: auto;
     padding: 20px 5%;
     background: #4a6a94;
-    color: #ffffff;
+    color: #fff;
     border-top: 3px solid #27ae60;
     font-size: 0.85rem;
     display: flex;
@@ -88,5 +172,11 @@ pre { background: #2d3436; color: #00ff00; padding: 12px; border-radius: 6px; ma
 
 /* CELULAR */
 @media (max-width: 480px) {
-    .main-footer { flex-direction: column; }
+    main {
+        padding: 20px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+    }
 }

@@ -1,48 +1,60 @@
-// 1. MAPEAMENTO DO DOM (Pegando os elementos do HTML)
-const campoTarefa = document.getElementById('tarefa');       // O campo do nome
-const campoCategoria = document.getElementById('categoria'); // O campo da categoria
-const campoDescricao = document.getElementById('descricao'); // O campo do bloco de notas
-const botaoAdicionar = document.getElementById('adicionar'); // O botão de salvar
-const listaPendencias = document.getElementById('lista-pendencias'); // A lista (ul)
+// Elementos do formulário e da lista
+const campoTarefa = document.getElementById("tarefa");
+const campoCategoria = document.getElementById("categoria");
+const campoDescricao = document.getElementById("descricao");
+const botaoAdicionar = document.getElementById("adicionar");
+const listaPendencias = document.getElementById("lista-pendencias");
 
-// 2. ESCUTADOR DE EVENTOS (Ouvindo o clique no botão)
-botaoAdicionar.addEventListener('click', function() {
-    
-    // Pegando o que você digitou no momento do clique
-    const tarefa = campoTarefa.value;
-    const categoria = campoCategoria.value;
-    const nota = campoDescricao.value;
+/**
+ * Monta o item <li> de uma tarefa
+ */
+function criarItem(tarefa, categoria, nota) {
+  const li = document.createElement("li");
 
-    // VALIDAÇÃO: Se o nome da tarefa estiver vazio, ele para aqui
-    if (tarefa === "") {
-        alert("Fabio, digite o nome da tarefa primeiro!");
-        return;
-    }
+  const titulo = document.createElement("strong");
+  titulo.textContent = `[${categoria.toUpperCase()}] ${tarefa}`;
+  li.appendChild(titulo);
 
-    // 3. CRIAÇÃO DE ELEMENTOS NO DOM (Fabricando a LI)
-    const li = document.createElement('li'); // Cria o item da lista
+  if (nota) {
+    const pre = document.createElement("pre");
+    const code = document.createElement("code");
+    code.textContent = `// Bloco Técnico FVN TECH:\n${nota}`;
+    pre.appendChild(code);
+    li.appendChild(pre);
+  }
 
-    // Montando o conteúdo visual da tarefa (usando crases `` para facilitar)
-    li.innerHTML = `
-        <strong>[${categoria.toUpperCase()}] ${tarefa}</strong>
-        <p style="margin: 10px 0; font-size: 0.9rem; color: #666;">Nota: ${nota}</p>
-        
-        <pre><code>// Bloco Técnico FVN TECH:\n${nota}</code></pre>
-        
-        <button onclick="removerItem(this)" style="margin-top:10px; color:red; cursor:pointer; background:none; border:none; font-size:0.8rem;">[Excluir Tarefa]</button>
-    `;
+  const botaoExcluir = document.createElement("button");
+  botaoExcluir.className = "btn-excluir";
+  botaoExcluir.textContent = "[Excluir Tarefa]";
+  botaoExcluir.addEventListener("click", () => li.remove());
+  li.appendChild(botaoExcluir);
 
-    // 4. INJETANDO NO SITE
-    listaPendencias.appendChild(li); // "Pendura" a tarefa na lista
-
-    // 5. LIMPEZA DOS CAMPOS
-    campoTarefa.value = "";
-    campoDescricao.value = "";
-    campoTarefa.focus(); // Coloca o cursor pronto para a próxima
-});
-
-// FUNÇÃO PARA REMOVER (O DOM identifica quem foi clicado)
-function removerItem(botao) {
-    const item = botao.parentElement; // Acha a 'li' que é "pai" do botão
-    item.remove(); // Remove o item inteiro da tela
+  return li;
 }
+
+/**
+ * Lê o formulário, valida e adiciona a tarefa na lista
+ */
+function adicionarTarefa() {
+  const tarefa = campoTarefa.value.trim();
+  const categoria = campoCategoria.value;
+  const nota = campoDescricao.value.trim();
+
+  if (tarefa === "") {
+    alert("Digite o nome da tarefa primeiro!");
+    campoTarefa.focus();
+    return;
+  }
+
+  listaPendencias.appendChild(criarItem(tarefa, categoria, nota));
+
+  campoTarefa.value = "";
+  campoDescricao.value = "";
+  campoTarefa.focus();
+}
+
+botaoAdicionar.addEventListener("click", adicionarTarefa);
+
+campoTarefa.addEventListener("keydown", (evento) => {
+  if (evento.key === "Enter") adicionarTarefa();
+});

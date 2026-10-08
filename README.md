@@ -1,23 +1,32 @@
 # Gerenciador de Tarefas e Notas Técnicas
 
-Projeto desenvolvido para ajudar na organização de tarefas diárias e registro de comandos técnicos (DOM). 
-Feito com HTML, CSS, JavaScript e boas práticas de front-end.
+Projeto para organizar tarefas diárias e registrar comandos técnicos e anotações de estudo.
 
-### 🚀 Funcionalidades
+🔗 **[Acessar o projeto online](https://fabiovnucci.github.io/gerenciador-de-tarefas/)**
 
-* **Cadastro de Tarefas:** Organização entre Estudos, Trabalho e Pessoal.
-* **Bloco de Notas / Código:** Campo para comandos e lembretes com visual de terminal.
-* **Visual Dark Mode:** Notas técnicas exibidas com formatação de código.
-* **Interatividade:** Adicionar e remover tarefas em tempo real.
+## 🛠️ Tecnologias
 
-### 🛠️ Tecnologias usadas
+- **HTML5:** estrutura semântica do conteúdo.
+- **CSS3:** estilização e layout responsivo com Flexbox.
+- **JavaScript (Vanilla):** manipulação do DOM e eventos.
+- **Git / GitHub:** versionamento e publicação.
 
-* **HTML5 / CSS3** (Flexbox)
-* **JavaScript** (Manipulação de DOM)
-* **Git / GitHub**
+## ⚙️ Funcionalidades
 
-### 📂 Como usar
+- Cadastro de tarefas por categoria: Estudos, Trabalho e Pessoal.
+- Bloco de notas para comandos e lembretes, exibido com visual de terminal.
+- Adição e remoção de tarefas em tempo real.
 
-1. **Clonar o repositório:**
-   ```bash
-   git clone [https://github.com/fabiovnucci/gerenciador-de-tarefas.git](https://github.com/fabiovnucci/gerenciador-de-tarefas.git)
+## 🚀 Como executar
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/fabiovnucci/gerenciador-de-tarefas.git
+```
+
+2. Abra o arquivo `index.html` em qualquer navegador.
+
+---
+
+Desenvolvido por **Fabio V Nucci** | © 2026 **FVN TECH**
